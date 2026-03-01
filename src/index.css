@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --atmosphere-blue: #2D58A7;
+  --atmosphere-green: #8CBF3F;
+  --atmosphere-light-blue: #DBEAFE;
+  --atmosphere-bg: #F8FAFC;
+  --text-primary: #1E293B;
+  --text-secondary: #64748B;
+
+  /* Spacing */
+  --section-padding: 5rem 1rem;
+  --max-width: 1200px;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--atmosphere-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--atmosphere-blue);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition-smooth);
+}
+
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3rem 1rem;
+  }
+}
